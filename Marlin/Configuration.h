@@ -1705,4 +1705,7 @@
 // With this option servos are powered only during movement, then turned off to prevent jitter.
 //#define DEACTIVATE_SERVOS_AFTER_MOVE
 
+// Include configuration for the feature that we are proposing
+#include "src/config/custom/PR_8365/FeatureConfiguration.h"
+
 #endif // CONFIGURATION_H
