@@ -3390,7 +3390,7 @@ void kill_screen(const char* lcd_msg) {
       #if ENABLED(BEDPID_AUTOTUNE_MENU)
         #define BEDPID_MENU_ITEMS(BEDLABEL) \
           _BEDPID_BASE_MENU_ITEMS(BEDLABEL); \
-          MENU_MULTIPLIER_ITEM_EDIT_CALLBACK(int3, MSG_PID_AUTOTUNE BEDLABEL, &autotune_temp_bed, 70, BED_MAXTEMP - 15, lcd_autotune_callback_Bed)
+          MENU_MULTIPLIER_ITEM_EDIT_CALLBACK(int3, MSG_PID_AUTOTUNE BEDLABEL, &autotune_temp_bed, BED_MIN_HEATED_OPERATING_TEMP, BED_MAX_HEATED_OPERATING_TEMP, lcd_autotune_callback_Bed)
       #else
         #define BEDPID_MENU_ITEMS(BEDLABEL) _BEDPID_BASE_MENU_ITEMS(BEDLABEL)
       #endif
